@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/deep-linking
  * https://reactnavigation.org/docs/configuring-links
  */
-
+ 
 import { LinkingOptions } from '@react-navigation/native';
 import * as Linking from 'expo-linking';
 
@@ -13,6 +13,7 @@ const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [Linking.createURL('/')],
   config: {
     screens: {
+      Login: "Login",
       Root: {
         screens: {
           TabOne: {
@@ -27,6 +28,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           },
         },
       },
+     
       Modal: 'modal',
       NotFound: '*',
     },
