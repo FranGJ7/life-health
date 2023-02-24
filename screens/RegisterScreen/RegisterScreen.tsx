@@ -1,6 +1,7 @@
 import { View, Text } from "../../components/Themed"
 
 
+
 export const RegisterScreen = () =>{
     return(
      <View>
@@ -9,5 +10,5 @@ export const RegisterScreen = () =>{
        </Text>
        
      </View>
-    )
+    ) 
 } 

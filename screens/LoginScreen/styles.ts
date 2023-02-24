@@ -7,10 +7,6 @@ align-items: center;
 justify-content: center;
 `;
 
-export const Label = styled.Text`
-  
-`
-
 export const Text = styled.Text`
  font-size: 18px;
 `;
