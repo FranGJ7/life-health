@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import { Container, TextInput, Text, Form, Button, TextButton } from "./styles"
+import { Container, TextInput, Text, Form, Button, TextButton, Link } from "./styles"
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
@@ -20,7 +20,7 @@ export const LoginScreen = () => {
   return (
     // Retornando o componente Container, que é um componente estilizado com CSS-in-JS
     <Container>
-      <Text>Login</Text>
+      
       {/* Renderiza o componente Formik que gerencia o estado do formulário */}
       <Formik
         initialValues={{ email: '', password: '' }}
@@ -33,7 +33,9 @@ export const LoginScreen = () => {
         }}
       >
         {({ values, errors, handleChange, handleSubmit }) => (
+         
           <Form>
+          <Text>Login</Text>
             <TextInput
               placeholder="Digite seu e-mail..."
               value={values.email}
@@ -51,9 +53,13 @@ export const LoginScreen = () => {
             <Button onPress={() => handleSubmit()}>
               <TextButton>Entrar</TextButton>
             </Button>
-
+            <Link onPress={()=> navigation.navigate('Register')}  >
+              <Text>
+                 Crie uma conta
+              </Text>
+            </Link>
           </Form>
-        )}
+          )}
       </Formik>
 
     </Container>
